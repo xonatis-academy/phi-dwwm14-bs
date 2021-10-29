@@ -1,0 +1,45 @@
+body {
+  background-image: url(images/ui/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* N'oubliez pas de préciser systématiquement => a pour désigner les liens que vous souhaitez cibler dans une classe */
+.menu a {
+  color: rgb(250, 250, 250);
+}
+
+/* Ici on s'adresse au 1er enfant ou 1er élément qui suit immédiatement le parent (row) portant la classe .menu 
+Vocabulaire => :first-child est une "pseudo-classe" 
+*/
+.menu :first-child img { 
+  filter: grayscale(100%); /* La fonction CSS grayscale() convertit une image en niveaux de gris (Voir https://developer.mozilla.org/fr/docs/Web/CSS */
+}
+
+.product {
+  height: 200px;
+  box-shadow: 0px 0px 19px 3px #DDD;
+}
+
+/* La pseudo-classe ":first-child" permet ici de cibler le premier élément (image produit) par rapport à son parent ("row") qui lui-même 
+se trouve à l'intérieur de la classe .product*/
+.product > .row:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.strike-price {
+  text-decoration: line-through;
+  font-weight: bolder;
+}
+
+.new-price {
+  color: rgb(212, 14, 14);
+  font-weight: bolder;
+}
+
+/* N'oubliez pas de préciser systématiquement => a pour désigner les liens que vous souhaitez cibler dans une classe */
+.social a {
+  color: rgb(250, 250, 250);
+} 
